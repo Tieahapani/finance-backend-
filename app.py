@@ -2,11 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-# Remove the trailing space and slash so the origin matches exactly
-CORS(app, origins=[
-    "http://localhost:3001",
-    "https://fin-frontend.netlify.app"
-])
+CORS(app)  # allow requests from any origin (including your Netlify site)
 
 def calculate_finance_cost(categories):
     total_monthly_cost = 0
@@ -28,5 +24,5 @@ def calculate():
     })
 
 if __name__ == '__main__':
-    # In production, set debug=False
+    # In production, you’ll run under Gunicorn; this is just for local dev
     app.run(port=5001, debug=True)
