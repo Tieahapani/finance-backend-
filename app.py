@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3001"])  # Allow requests from frontend (React)
+CORS(app, origins=["http://localhost:3001", "https://fin-frontend.netlify.app/ "])  # Allow requests from frontend (React)
 
 def calculate_finance_cost(categories):
     total_monthly_cost = 0
