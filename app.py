@@ -7,6 +7,8 @@ app = Flask(__name__)
 # Allow your deployed frontend(s). Add preview URLs if you use Netlify previews.
 ALLOWED_ORIGINS = [
     "https://fin-frontend.netlify.app",
+    "https://localhost:3000", 
+    r"https://.*\.netlify\.app", 
     # "https://<your-custom-domain>",    # add if you have one
     # "http://localhost:3000",           # uncomment for local dev
 ]
